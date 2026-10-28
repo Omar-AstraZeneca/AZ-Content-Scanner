@@ -1,0 +1,280 @@
+{
+    "markets": [
+        {
+            "code": "GLOBAL",
+            "name": "Global",
+            "countries": [],
+            "sites": [
+                {
+                    "url": "https://www.astrazeneca.com/",
+                    "country": "Global",
+                    "category": "Corporativo"
+                },
+                {
+                    "url": "https://astrazenecaclinicaltrials.com/",
+                    "country": "Global",
+                    "category": "Ensayos clínicos"
+                },
+                {
+                    "url": "https://www.saphnelohcp.com/",
+                    "country": "Global",
+                    "category": "Marca HCP"
+                }
+            ],
+            "domain_allowlist": [
+                "astrazeneca.com",
+                "astrazenecaclinicaltrials.com",
+                "saphnelohcp.com"
+            ]
+        },
+        {
+            "code": "US",
+            "name": "Estados Unidos",
+            "countries": [
+                "Estados Unidos"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.astrazeneca-us.com/",
+                    "country": "Estados Unidos",
+                    "category": "Corporativo"
+                },
+                {
+                    "url": "https://www.azpatientsupport.com/",
+                    "country": "Estados Unidos",
+                    "category": "Programas de pacientes"
+                }
+            ],
+            "domain_allowlist": [
+                "astrazeneca-us.com",
+                "azpatientsupport.com"
+            ]
+        },
+        {
+            "code": "UK",
+            "name": "Reino Unido",
+            "countries": [
+                "Reino Unido"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.myastrazeneca.co.uk/",
+                    "country": "Reino Unido",
+                    "category": "Portal HCP"
+                },
+                {
+                    "url": "https://www.myazmed.co.uk/",
+                    "country": "Reino Unido",
+                    "category": "Portal para pacientes"
+                },
+                {
+                    "url": "https://www.astrazeneca.co.uk/",
+                    "country": "Reino Unido",
+                    "category": "Corporativo"
+                }
+            ],
+            "domain_allowlist": [
+                "myastrazeneca.co.uk",
+                "myazmed.co.uk",
+                "astrazeneca.co.uk"
+            ]
+        },
+        {
+            "code": "BR",
+            "name": "Brasil",
+            "countries": [
+                "Brasil"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.astrazeneca.com.br/",
+                    "country": "Brasil",
+                    "category": "Corporativo"
+                },
+                {
+                    "url": "https://www.azmed.com.br/",
+                    "country": "Brasil",
+                    "category": "Portal HCP"
+                }
+            ],
+            "domain_allowlist": [
+                "astrazeneca.com.br",
+                "azmed.com.br"
+            ]
+        },
+        {
+            "code": "MX",
+            "name": "México",
+            "countries": [
+                "México"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.astrazeneca.mx/",
+                    "country": "México",
+                    "category": "Corporativo"
+                },
+                {
+                    "url": "https://www.azmed.com.mx/",
+                    "country": "México",
+                    "category": "Portal HCP"
+                }
+            ],
+            "domain_allowlist": [
+                "astrazeneca.mx",
+                "azmed.com.mx"
+            ]
+        },
+        {
+            "code": "ANDINO",
+            "name": "Andino",
+            "countries": [
+                "Colombia",
+                "Ecuador",
+                "Perú"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.astrazeneca.co/",
+                    "country": "Colombia",
+                    "category": "Corporativo"
+                },
+                {
+                    "url": "https://andean.astrazeneca.com/",
+                    "country": "Andino",
+                    "category": "Corporativo regional"
+                },
+                {
+                    "url": "https://www.azmedical.co/",
+                    "country": "Colombia",
+                    "category": "Portal HCP"
+                },
+                {
+                    "url": "https://www.azmedical.pe/",
+                    "country": "Perú",
+                    "category": "Portal HCP"
+                },
+                {
+                    "url": "https://azacademy-peru.com/",
+                    "country": "Perú",
+                    "category": "Academy"
+                }
+            ],
+            "domain_allowlist": [
+                "astrazeneca.co",
+                "andean.astrazeneca.com",
+                "azmedical.co",
+                "azmedical.pe",
+                "azacademy-peru.com"
+            ]
+        },
+        {
+            "code": "CAMCAR",
+            "name": "Centroamérica y Caribe (CAMCAR)",
+            "countries": [
+                "Belice",
+                "Costa Rica",
+                "El Salvador",
+                "Guatemala",
+                "Honduras",
+                "Nicaragua",
+                "Panamá",
+                "República Dominicana",
+                "Regional CAMCAR"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.azmed.cr/",
+                    "country": "Costa Rica",
+                    "category": "Portal HCP"
+                },
+                {
+                    "url": "https://www.idaz.cr/",
+                    "country": "Costa Rica",
+                    "category": "IDAZ · Pacientes y consumidores"
+                },
+                {
+                    "url": "https://www.idaz.gt/",
+                    "country": "Guatemala",
+                    "category": "IDAZ"
+                },
+                {
+                    "url": "https://www.idaz.hn/",
+                    "country": "Honduras",
+                    "category": "IDAZ"
+                },
+                {
+                    "url": "https://www.idaz.ni/",
+                    "country": "Nicaragua",
+                    "category": "IDAZ · Consumidores"
+                },
+                {
+                    "url": "https://www.idaz.pa/",
+                    "country": "Panamá",
+                    "category": "IDAZ · Portal HCP"
+                },
+                {
+                    "url": "https://www.idaz.sv/",
+                    "country": "El Salvador",
+                    "category": "IDAZ · Portal HCP"
+                },
+                {
+                    "url": "https://www.idaz.do/",
+                    "country": "República Dominicana",
+                    "category": "IDAZ · Portal HCP"
+                },
+                {
+                    "url": "https://www.camcar.astrazeneca.com/",
+                    "country": "Regional CAMCAR",
+                    "category": "Corporativo regional"
+                },
+                {
+                    "url": "https://azacademy-camcar.com/",
+                    "country": "Regional CAMCAR",
+                    "category": "Academy"
+                },
+                {
+                    "url": "https://disfrutomisalud.com/",
+                    "country": "Regional CAMCAR",
+                    "category": "Programa de pacientes · Centroamérica y R. Dominicana"
+                },
+                {
+                    "url": "https://celebratelifeprogram.com/",
+                    "country": "Regional CAMCAR",
+                    "category": "Programa de pacientes · Caribe (inglés)"
+                }
+            ],
+            "domain_allowlist": [
+                "azmed.cr",
+                "idaz.cr",
+                "idaz.gt",
+                "idaz.hn",
+                "idaz.ni",
+                "idaz.pa",
+                "idaz.sv",
+                "idaz.do",
+                "camcar.astrazeneca.com",
+                "azacademy-camcar.com",
+                "disfrutomisalud.com",
+                "celebratelifeprogram.com"
+            ]
+        },
+        {
+            "code": "AU",
+            "name": "Australia",
+            "countries": [
+                "Australia"
+            ],
+            "sites": [
+                {
+                    "url": "https://www.astrazeneca.com.au/",
+                    "country": "Australia",
+                    "category": "Corporativo"
+                }
+            ],
+            "domain_allowlist": [
+                "astrazeneca.com.au"
+            ]
+        }
+    ]
+}

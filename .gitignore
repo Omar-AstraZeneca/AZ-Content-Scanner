@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+data/auth_state.json
+data/scanner.db
+data/scanner.db-shm
+data/scanner.db-wal
+data/evidence/
+scan.log
+.DS_Store

@@ -1,0 +1,31 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "API + Dashboard (FastAPI)",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "uvicorn",
+			"args": [
+				"app.main:app",
+				"--reload",
+				"--port",
+				"8000"
+			],
+			"jinja": true,
+			"envFile": "${workspaceFolder}/.env"
+		},
+		{
+			"name": "Ejecutar escaneo (CLI)",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/run_scan.py",
+			"args": [
+				"--market",
+				"MX"
+			],
+			"console": "integratedTerminal",
+			"envFile": "${workspaceFolder}/.env"
+		}
+	]
+}

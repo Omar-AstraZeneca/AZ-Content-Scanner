@@ -1,0 +1,5 @@
+INFO:     Started server process [22224]
+INFO:     Waiting for application startup.
+2026-10-27 18:54:30,330 WARNING [startup] DASHBOARD_PASSWORD no está definida: solo se aceptan conexiones desde esta máquina. Define una contraseña en el .env antes de exponer el servicio en red.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

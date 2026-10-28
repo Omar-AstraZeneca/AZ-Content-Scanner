@@ -1,0 +1,315 @@
+INFO:     127.0.0.1:57250 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57250 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57250 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57250 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57256 - "POST /api/auth/prepare-session HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57257 - "POST /api/auth/prepare-session HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57271 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57280 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57280 - "POST /api/auth/session-stop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57280 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54031 - "POST /api/auth/prepare-session HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54063 - "POST /api/auth/session-stop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54066 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54120 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54156 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58061 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58098 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58552 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58586 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50409 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50441 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50453 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50479 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50489 - "GET /api/auth/session-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56307 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56340 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62482 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62514 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54327 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54360 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54394 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54432 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52247 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53188 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59852 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59852 - "GET /css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64685 - "GET /favicon.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59852 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "POST /api/auth/prepare-session HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55288 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51760 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51802 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51856 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52884 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59473 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59506 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60410 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60441 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63910 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60229 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55374 - "POST /api/auth/skip-step HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55378 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55385 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59487 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55655 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65195 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63019 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63057 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63892 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61394 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61430 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64621 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64660 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64695 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64727 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62784 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62817 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62851 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62884 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54091 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54128 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54164 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63765 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60725 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60757 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60802 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60834 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60869 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60905 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64121 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64154 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64186 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64223 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64259 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64296 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62725 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50836 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50873 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50911 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53289 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58507 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58543 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57584 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60083 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64270 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64270 - "GET /css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58691 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53434 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53434 - "GET /js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63085 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53434 - "GET /api/auth/browsers HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60348 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60348 - "GET /js/app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:63085 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53434 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET /api/auth/browsers HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63085 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63085 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:63085 - "GET /js/app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53434 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63085 - "GET /api/auth/browsers HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63085 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59726 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59726 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59726 - "GET /css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60592 - "GET /js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54556 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59726 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60592 - "GET /api/auth/browsers HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54556 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54556 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54556 - "GET /js/app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59726 - "GET /api/scan/markets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60592 - "GET /api/auth/session-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54556 - "GET /api/auth/browsers HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54556 - "GET /api/scan/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54581 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64958 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63369 - "GET /health HTTP/1.1" 404 Not Found

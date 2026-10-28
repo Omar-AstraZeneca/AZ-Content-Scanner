@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#830051" />
+    <meta name="color-scheme" content="light" />
+    <title>Content Expiry Scanner · Piloto</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="session-gate-open">
+    <!-- Pantalla inicial obligatoria: sesión para contenido protegido -->
+    <div id="sessionGate" class="session-gate" role="dialog" aria-modal="true"
+        aria-labelledby="sessionGateTitle" aria-describedby="sessionGateMessage">
+        <div class="session-gate-card">
+            <p class="session-gate-eyebrow">Content Expiry Scanner</p>
+            <h2 id="sessionGateTitle">Inicia sesión para auditar contenido protegido</h2>
+            <p id="sessionGateMessage" class="session-gate-message">
+                Comprobando la sesión guardada…
+            </p>
+            <ol id="sessionGateSteps" class="session-steps"></ol>
+            <div id="sessionGateBrowserBox" class="session-gate-browser">
+                <label for="sessionBrowser">Navegador para el login</label>
+                <select id="sessionBrowser" aria-describedby="sessionBrowserHint"></select>
+                <p id="sessionBrowserHint" class="session-gate-hint"></p>
+            </div>
+            <div id="sessionGateActions" class="session-gate-actions"></div>
+            <p class="session-gate-footnote">
+                Puedes continuar sin iniciar sesión: se auditará solo el contenido
+                público y las páginas protegidas se marcarán como no auditables.
+            </p>
+        </div>
+    </div>
+
+    <!-- Barra superior -->
+    <header class="topbar">
+        <div class="brand">
+            <img class="logo" src="favicon.svg" alt="Logotipo de Content Expiry Scanner" />
+            <div>
+                <h1>Content Expiry Scanner</h1>
+                <small>Seguimiento de IDs vencidos, próximos a vencer y vigentes</small>
+            </div>
+        </div>
+        <nav aria-label="Navegación principal">
+            <a class="active" href="#scanner" aria-current="page">Escanear</a>
+            <a href="#history">Historial</a>
+            <!-- Solo se muestra cuando hay un escaneo activo con resultados -->
+            <a id="navReview" class="hidden" href="#review">Revisar IDs</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Controles de escaneo -->
+        <section id="scanner" class="card controls" aria-label="Controles de escaneo">
+            <div class="control-group filter-market">
+                <label for="fMarket">Región</label>
+                <select id="fMarket">
+                    <option value="">Todos</option>
+                </select>
+            </div>
+
+            <div class="control-group filter-country">
+                <label for="fCountry">País / territorio</label>
+                <select id="fCountry">
+                    <option value="">Todos</option>
+                </select>
+            </div>
+
+            <div class="control-group site-search">
+                <label for="fSiteSearch">Buscar sitio</label>
+                <input id="fSiteSearch" type="search" placeholder="Nombre o dominio" autocomplete="off" />
+            </div>
+
+            <div class="control-group site-select">
+                <label for="fSite">Sitio</label>
+                <select id="fSite">
+                    <option value="">Todos los sitios</option>
+                </select>
+            </div>
+
+            <div class="control-group site-url grow">
+                <label for="fSiteUrl">URL que se escaneará</label>
+                <input id="fSiteUrl" type="url" placeholder="Un sitio concreto, o vacío para toda la región" autocomplete="off" />
+                <label id="externalScopeWrap" class="scope-confirm hidden" for="confirmExternalScope">
+                    <input id="confirmExternalScope" type="checkbox" />
+                    Confirmo que tengo autorización para este dominio
+                </label>
+            </div>
+
+            <div class="control-group site-category">
+                <label for="fSiteCategory">Categoría del sitio</label>
+                <input id="fSiteCategory" type="text" placeholder="Ej. HCP, Pacientes, Corporativo"
+                    autocomplete="off" />
+            </div>
+
+            <details id="advancedFilters" class="advanced-filters">
+                <summary>Filtros adicionales</summary>
+                <div class="advanced-filter-grid">
+                    <div class="control-group">
+                        <label for="fStatus">Estado</label>
+                        <select id="fStatus">
+                            <option value="">Todos</option>
+                            <option value="VENCIDO">Vencido</option>
+                            <option value="PROXIMO_A_VENCER">Próximo a vencer</option>
+                            <option value="VIGENTE">Vigente</option>
+                            <option value="SIN_DATO">Sin fecha fiable</option>
+                        </select>
+                    </div>
+                    <div class="control-group search-assets">
+                        <label for="fSearch">Buscar ID o URL</label>
+                        <input id="fSearch" type="search" placeholder="Veeva ID o URL" autocomplete="off" />
+                    </div>
+                </div>
+            </details>
+
+            <div class="control-group buttons">
+                <button id="btnScan" class="btn primary" type="button">▶ Escanear sitio o región</button>
+                <button id="btnCancel" class="btn danger hidden" type="button">■ Cancelar escaneo</button>
+                <button id="btnRefresh" class="btn" type="button"
+                    title="Descarta el escaneo actual y restablece los filtros">
+                    ↻ Limpiar filtros
+                </button>
+            </div>
+        </section>
+
+        <!-- Progreso del escaneo (sin recuentos por estado: esos viven en los cuadros de color) -->
+        <section id="scanBanner" class="scan-progress-banner hidden" role="status" aria-live="polite">
+            <span id="scanSpinner" class="scan-spinner" aria-hidden="true"></span>
+            <div class="scan-progress-content">
+                <div class="scan-progress-heading">
+                    <strong id="scanBannerTitle">Preparando escaneo</strong>
+                    <span id="scanElapsed" class="scan-elapsed">00:00</span>
+                </div>
+                <p id="scanProgressText" class="scan-progress-text">Conectando con el crawler.</p>
+                <div id="scanProgressTrack" class="scan-progress-track" role="progressbar"
+                    aria-label="Progreso del escaneo" aria-valuemin="0" aria-valuemax="100"
+                    aria-valuetext="Progreso indeterminado">
+                    <span id="scanProgressFill" class="scan-progress-fill"></span>
+                </div>
+                <small class="scan-progress-hint">
+                    El escaneo recorre el sitio elegido, todos sus subdominios y todas sus páginas. Si no eliges
+                    un sitio, recorre todos los sitios de la región. Puede demorar mucho (incluso horas en
+                    sitios grandes). Puedes cancelarlo en cualquier momento: se conserva lo detectado.
+                </small>
+            </div>
+        </section>
+
+        <!-- KPIs: solo muestran el escaneo ACTIVO (el actual). Lo anterior vive en el historial -->
+        <section class="kpis" aria-label="Resultados del escaneo actual">
+            <div class="kpi danger" data-status="VENCIDO">
+                <span class="kpi-label">Vencidos</span>
+                <span class="kpi-value" id="kVencido">0</span>
+            </div>
+            <div class="kpi warning" data-status="PROXIMO_A_VENCER">
+                <span class="kpi-label">Próximos a vencer</span>
+                <span class="kpi-value" id="kProximo">0</span>
+            </div>
+            <div class="kpi success" data-status="VIGENTE">
+                <span class="kpi-label">Vigentes</span>
+                <span class="kpi-value" id="kVigente">0</span>
+            </div>
+            <div class="kpi neutral" data-status="SIN_DATO"
+                title="No se encontró una fecha, o la que se encontró no es fiable (p. ej. un año suelto en el pie). Hay que revisarlo a mano.">
+                <span class="kpi-label">Sin fecha fiable</span>
+                <span class="kpi-value" id="kSinDato">0</span>
+            </div>
+            <div class="kpi info">
+                <span class="kpi-label">Total IDs</span>
+                <span class="kpi-value" id="kTotal">0</span>
+            </div>
+        </section>
+
+        <!-- Detalle de activos del escaneo actual -->
+        <section class="card asset-section">
+            <details id="assetsDetails" class="asset-disclosure">
+                <summary class="asset-summary">
+                    <span class="asset-summary-title">Detalle de activos</span>
+                    <span id="rowCount" class="muted">Inicia un escaneo para ver resultados</span>
+                    <span class="disclosure-action">
+                        <span class="when-closed">Mostrar detalle</span>
+                        <span class="when-open">Ocultar detalle</span>
+                    </span>
+                </summary>
+
+                <!-- Barra de exportación del detalle -->
+                <div class="export-bar" role="group" aria-label="Exportar detalle de activos">
+                    <span class="export-bar-label">Exportar detalle</span>
+                    <div class="export-bar-actions">
+                        <button id="btnExportCsv" class="btn" type="button" disabled>⬇ Descargar CSV</button>
+                        <button id="btnExportPdf" class="btn" type="button" disabled>⬇ Descargar PDF</button>
+                    </div>
+                </div>
+
+                <div class="table-wrap asset-table-wrap">
+                    <table id="tbl" aria-label="Detalle de activos del escaneo actual">
+                        <thead>
+                            <tr>
+                                <th>Estado</th>
+                                <th>Región</th>
+                                <th>País</th>
+                                <th>Veeva ID</th>
+                                <th>Vencimiento</th>
+                                <th>URL del contenido</th>
+                                <th><span class="sr-only">Acciones</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </details>
+        </section>
+
+        <!-- Historial: aquí viven todos los escaneos anteriores -->
+        <section id="history" class="card">
+            <h2>Historial de escaneos</h2>
+            <div class="table-wrap">
+                <table id="tblRuns" aria-label="Historial de escaneos">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Región</th>
+                            <th>Sitio</th>
+                            <th>Estado</th>
+                            <th>Inicio</th>
+                            <th>Páginas</th>
+                            <th>Imágenes</th>
+                            <th>Vencidos</th>
+                            <th>Próximos</th>
+                            <th>Sin fecha fiable</th>
+                            <th>Vigentes</th>
+                            <th>Total IDs</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Revisión manual: solo con los resultados del escaneo actual -->
+        <div id="review" class="stack hidden">
+
+            <section class="card false-negative-form">
+                <h2>Registrar un ID no detectado</h2>
+                <p class="muted">
+                    Guarda la URL donde encontraste material vigente, próximo a vencer o vencido que no apareció en el
+                    escaneo.
+                </p>
+                <div class="form-row">
+                    <div class="control-group">
+                        <label for="mMarketIn">Región</label>
+                        <select id="mMarketIn"></select>
+                    </div>
+                    <div class="control-group grow">
+                        <label for="mUrl">URL de la página</label>
+                        <input id="mUrl" type="url" placeholder="https://..." autocomplete="off" />
+                    </div>
+                    <div class="control-group">
+                        <label for="mType">Tipo</label>
+                        <select id="mType">
+                            <option value="texto">Texto</option>
+                            <option value="imagen">Imagen</option>
+                            <option value="video">Video</option>
+                            <option value="pdf">PDF</option>
+                        </select>
+                    </div>
+                    <div class="control-group grow">
+                        <label for="mDesc">ID o detalle</label>
+                        <input id="mDesc" type="text" placeholder="Veeva ID o fecha observada" autocomplete="off" />
+                    </div>
+                    <button class="btn primary" id="btnMissed" type="button">+ Registrar ID</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="section-header-row">
+                    <div>
+                        <h2>Revisión manual de IDs</h2>
+                        <p class="muted">
+                            Marca las detecciones incorrectas del escaneo actual para corregir el Veeva ID o la fecha
+                            de vencimiento.
+                        </p>
+                    </div>
+                    <div class="validation-controls">
+                        <label for="vReviewer">Revisor</label>
+                        <input id="vReviewer" type="text" placeholder="Nombre" autocomplete="name" />
+                        <label for="vShow">Mostrar</label>
+                        <select id="vShow">
+                            <option value="pending">Pendientes</option>
+                            <option value="all">Todos</option>
+                        </select>
+                        <button class="btn" id="btnReload" type="button">↻ Recargar</button>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table id="tblVal" aria-label="Revisión manual de IDs del escaneo actual">
+                        <thead>
+                            <tr>
+                                <th>Estado</th>
+                                <th>Región</th>
+                                <th>Veeva ID</th>
+                                <th>Vencimiento</th>
+                                <th>URL</th>
+                                <th>Revisión</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal de detalle -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar detalle">✕</button>
+            <h2 id="modalTitle">Detalle del activo</h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Diálogo de retroalimentación -->
+    <dialog id="feedbackDialog" class="feedback-dialog" aria-labelledby="feedbackTitle"
+        aria-describedby="feedbackMessage">
+        <form id="feedbackForm" class="feedback-dialog-content" novalidate>
+            <button id="feedbackClose" class="feedback-dialog-close" type="button" aria-label="Cerrar">✕</button>
+            <p id="feedbackEyebrow" class="feedback-eyebrow">Content Expiry Scanner</p>
+            <h2 id="feedbackTitle"></h2>
+            <p id="feedbackMessage" class="feedback-message"></p>
+            <div id="feedbackFields" class="feedback-fields"></div>
+            <div id="feedbackActions" class="feedback-actions"></div>
+        </form>
+    </dialog>
+
+    <!-- Diálogo de sesión guiada (AzMed -> Veeva -> Kaltura) -->
+    <dialog id="sessionDialog" class="feedback-dialog session-dialog" aria-labelledby="sessionTitle"
+        aria-describedby="sessionMessage">
+        <div class="feedback-dialog-content">
+            <button id="sessionDialogClose" class="feedback-dialog-close" type="button" aria-label="Cerrar">✕</button>
+            <p class="feedback-eyebrow">Contenido protegido</p>
+            <h2 id="sessionTitle">Sesión</h2>
+            <p id="sessionMessage" class="feedback-message"></p>
+            <ol id="sessionSteps" class="session-steps hidden"></ol>
+            <div id="sessionActions" class="feedback-actions"></div>
+        </div>
+    </dialog>
+
+    <!-- Toda la lógica (incluidas la revisión manual y la exportación) vive en app.js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

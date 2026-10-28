@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="AZ Content Expiry Scanner favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7a1c5a"/>
+      <stop offset="100%" stop-color="#2d0a2f"/>
+    </linearGradient>
+    <linearGradient id="diamond" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7d7ea"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="22" fill="url(#bg)"/>
+  <path d="M64 18 102 64 64 110 26 64Z" fill="url(#diamond)" opacity="0.95"/>
+  <path d="M64 36 84 64 64 92 44 64Z" fill="#830051" opacity="0.9"/>
+  <path d="M19 92h90" stroke="#f7d7ea" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="64" cy="64" r="8" fill="#ffffff" opacity="0.9"/>
+</svg>

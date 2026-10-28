@@ -1,0 +1,43 @@
+{
+  "running": false,
+  "finished": true,
+  "mode": "guided",
+  "started_at": "2026-10-27T19:49:13",
+  "updated_at": "2026-10-27T19:55:22",
+  "current": null,
+  "message": "Ventana cerrada. Se guardó la sesión de las plataformas completadas.",
+  "cookies": 46,
+  "steps": [
+    {
+      "id": "azmed",
+      "label": "AzMed / Identity",
+      "url": "https://www.azmed.cr/",
+      "status": "done",
+      "detail": "Sesión detectada"
+    },
+    {
+      "id": "veeva",
+      "label": "Veeva Vault",
+      "url": "https://login.veevavault.com/auth/login?retURL=https%3A%2F%2Fastrazeneca-promomats.veevavault.com%2Fui%2F",
+      "status": "done",
+      "detail": "Sesión detectada"
+    },
+    {
+      "id": "kaltura",
+      "label": "Kaltura",
+      "url": "https://kmc.kaltura.com/index.php/kmcng/login",
+      "status": "skipped",
+      "detail": "Ventana cerrada"
+    }
+  ],
+  "error": null,
+  "pid": 21180,
+  "browser": "chrome",
+  "browser_label": "Google Chrome",
+  "platforms": {
+    "azmed": true,
+    "veeva": true,
+    "kaltura": false
+  },
+  "kaltura_ks": false
+}
